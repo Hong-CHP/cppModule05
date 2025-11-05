@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/04 11:21:08 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/04 13:49:25 by hporta-c         ###   ########.fr       */
+/*   Created: 2025/11/05 16:28:34 by hporta-c          #+#    #+#             */
+/*   Updated: 2025/11/05 16:28:36 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,8 @@
 
 int main()
 {
-	
+	Bureaucrat A("Poisson d'argent");
+	A.incrementGrade();
+	std::cout << A.getGrade() << std::endl;
+	return (0);
 }

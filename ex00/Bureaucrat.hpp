@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:21:05 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/04 13:57:57 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/05 16:29:36 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,15 @@ class	Bureaucrat {
 		Bureaucrat(std::string name);
 		Bureaucrat(const Bureaucrat	&other);
 		Bureaucrat&	operator=(const Bureaucrat	&other);
-		~Bureaucrat() {
-			std::cout << "Bureaucrat destruct." << std::endl;
-		};
+		~Bureaucrat();
 		// getter
 		const std::string&	getName() const;
-		int	getGrade();
+		int	getGrade() const;
 		
 		void	incrementGrade();
 		void	decrementGrade();
-	};
+};
+
+std::ostream& operator<<(std::ostream&os, const Bureaucrat &x);
 
 #endif

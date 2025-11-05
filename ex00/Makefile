@@ -6,7 +6,7 @@
 #    By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/11/04 11:21:11 by hporta-c          #+#    #+#              #
-#    Updated: 2025/11/04 11:40:15 by hporta-c         ###   ########.fr        #
+#    Updated: 2025/11/05 16:28:20 by hporta-c         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = Bureaucrat
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -I. -std=c++98
 SRCS = main.cpp Bureaucrat.cpp 
-OBJS = $(SRCS:.o=.cpp)
+OBJS = $(SRCS:.cpp=.o)
 RM = rm -f
 
 all: $(NAME)
