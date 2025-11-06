@@ -6,11 +6,12 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:21:02 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/06 12:17:26 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:10:13 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 Bureaucrat::Bureaucrat(): name(""), grade(150) {
 	std::cout << "Defaut Bureaucrat construct." << std::endl;
@@ -68,6 +69,15 @@ void	Bureaucrat::decrementGrade() {
 	if (grade + 1 > 150)
 		throw GradeTooLowException();
 	grade++;
+}
+
+void	Bureaucrat::signForm(Form& a) {
+	try {
+		a.beSigned(*this);
+		std:: cout << name << " signed " << a.getName() << std::endl;
+	} catch (std::exception &e) {
+		std:: cerr << name << " couldn't sign " << a.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 std::ostream& operator<<(std::ostream&os, const Bureaucrat &x) {

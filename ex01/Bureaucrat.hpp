@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 11:21:05 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/06 13:40:52 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/06 15:09:58 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <iostream>
 # include <exception>
 // # include <cstring>
+
+class Form;
 
 class	Bureaucrat {
 	private:
@@ -35,7 +37,8 @@ class	Bureaucrat {
 		// action
 		void	incrementGrade();
 		void	decrementGrade();
-
+		void	signForm(Form &a);
+		
 		// throw
 		class	GradeTooHighException: public std::exception {
 			virtual const char* what() const throw();
