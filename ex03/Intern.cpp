@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 12:09:04 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/08 10:28:04 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/08 10:58:40 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ AForm*	Intern::makeForm(std::string formName, std::string target) {
 	{
 		if (formName == formRequire[i])
 			return (this->*func[i])(target);
-		i++;
 	}
 	std::cout << "Creation failed, form does not exist..." << std::endl;
 	return (NULL);
@@ -44,9 +43,9 @@ AForm*	Intern::createShrubbery(std::string target)
 }
 AForm*	Intern::createRobotomy(std::string target)
 {
-	return (new ShrubberyCreationForm(target));
+	return (new RobotomyRequestForm(target));
 }
 AForm*	Intern::createPresidential(std::string target)
 {
-	return (new ShrubberyCreationForm(target));	
+	return (new PresidentialPardonForm(target));	
 }

@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 13:11:27 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/07 10:32:52 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/08 10:38:07 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class	AForm {
 		AForm(std::string name, int gradeSign, int gradeExecute);
 		AForm(const AForm &other);
 		AForm&	operator=(const AForm &other);
-		~AForm();
+		virtual ~AForm();
 		
 		// getters
 		const std::string& getName() const;

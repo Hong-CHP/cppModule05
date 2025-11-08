@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 17:04:21 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/07 12:04:30 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/08 12:24:47 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+#include "Intern.hpp"
 
 int main()
 {
@@ -123,6 +124,50 @@ int main()
 		}
 		// std::cout << A.getGrade() << std::endl;
 		// std::cout << B.getGrade() << std::endl;
+	}
+	{
+		std::cout << "****************INTERN************" << std::endl;
+		Intern someRandomIntern;
+		AForm* rrf;
+		Bureaucrat B("FRANCK", 46);
+		rrf = someRandomIntern.makeForm("robotomy request", "bender");
+		if (rrf == NULL)
+			return (1);
+		try{
+			for (int i = 0; i < 45; i++)
+			{
+				B.incrementGrade();
+			}
+			B.signForm(*rrf);
+			B.executeForm(*rrf);
+		} catch (std::exception &e) {
+			delete rrf;
+			rrf = NULL;
+			std::cout << e.what() << std::endl;
+		}
+		delete rrf;
+	}
+	{
+		std::cout << "****************INTERN NOT SIGN FORM************" << std::endl;
+		Intern someRandomIntern;
+		AForm* rrf;
+		Bureaucrat B("FRANCK", 46);
+		rrf = someRandomIntern.makeForm("shrubbery creation", "bender");
+		if (rrf == NULL)
+			return (1);
+		try{
+			for (int i = 0; i < 45; i++)
+			{
+				B.incrementGrade();
+			}
+			// B.signForm(*rrf);
+			B.executeForm(*rrf);
+		} catch (std::exception &e) {
+			delete rrf;
+			rrf = NULL;
+			std::cout << e.what() << std::endl;
+		}
+		delete rrf;
 	}
 	return (0);
 }
