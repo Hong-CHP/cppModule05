@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:28:34 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/06 16:07:06 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/06 16:30:57 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,8 +63,9 @@ int main()
 		try {
 			Form RR("read and write", 1, 2);
 			std::cout << RR << std::endl;
-			Form EE;
-			EE = RR;
+			std::cout << &RR << std::endl;
+			Form EE = RR;
+			std::cout << &EE << std::endl;
 			std::cout << EE << std::endl;
 			Bureaucrat CC("coco", 1);
 			CC.signForm(EE);
