@@ -6,7 +6,7 @@
 /*   By: hporta-c <hporta-c@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/05 16:28:34 by hporta-c          #+#    #+#             */
-/*   Updated: 2025/11/06 12:20:42 by hporta-c         ###   ########.fr       */
+/*   Updated: 2025/11/25 11:54:14 by hporta-c         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,6 @@ int main()
 		Bureaucrat B("Millepattes", 150);
 		for (int i = 0; i < 150; i++)
 			B.incrementGrade();
-	} catch (std::exception &e) {
-		std::cerr << e.what() << std::endl;
-	}
-	std::cout << "************************************" << std::endl;
-	try {
-		Bureaucrat C("Escargot", 0);
 	} catch (std::exception &e) {
 		std::cerr << e.what() << std::endl;
 	}
